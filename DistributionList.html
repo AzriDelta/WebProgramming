@@ -1,0 +1,40 @@
+<!--Muhammad Azri bin Zainuddin 031897 DTMM5!-->
+
+<html>
+	<head>
+		<title>Distribution List</title>
+		
+		<script>
+		function extMsg()
+		{
+			if((isFinite(document.fdate.date.value)))
+			{
+				alert ("Please enter the date.");
+			}
+			
+			else 
+			{
+				alert("Thank you, the date has been submitted");
+			}
+							
+		}
+		</script>
+		
+	</head>
+	<body>	
+	<center>
+		<h1 align="center">Distribution List Generation</h1>
+		
+		
+		<form name=fdate method="GET" action="">
+		Date of Distribution
+		<input type="date" name="date">
+		
+		<br><br>
+		<input type=submit value="Submit" onClick="extMsg()">
+		<input type=reset value="Reset">
+		</form>
+			
+	</center>
+	</body>
+</html>

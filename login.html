@@ -1,0 +1,110 @@
+<!--Muhammad Azri bin Zainuddin 031897 DTMM5!-->
+
+<html>
+	<head>
+		<title>Login</title>
+		
+		<script>
+		
+		function checkUser(name)
+		{
+			if((isFinite(name)))
+			{
+				return false;
+			}
+			
+			if((name.length>0)&&(name.length<11))
+			{
+				return true;
+			}
+			
+			else
+			{
+				return false;
+			}
+		}
+		
+		/*----------------------------------------*/
+		
+		function checkPass(password)
+		{
+			if((isFinite(password)))
+			{
+				return false;
+			}
+			
+			if((password.length>0)&&(password.length<11))
+			{
+				return true;
+			}
+			
+			else
+			{
+				return false;
+			}
+			
+		}
+		
+		/*----------------------------------------*/
+		function check()
+		{
+			nameflag=checkUser(document.login.name.value);
+			passflag=checkPass(document.login.password.value);
+			
+			if(nameflag==false)
+			{
+				alert("Please enter your username/Username must be characters.");
+				document.login.name.select();
+				document.login.name.focus();
+				return false;
+			}
+			
+			if(passflag==false)
+			{
+				alert("Please enter your password/Password must be characters.");
+				document.login.name.select();
+				document.login.name.focus();
+				return false;
+			}
+			
+			return true;
+		}
+		
+		</script>
+		
+	</head>
+	<body>	
+	<center>
+		<h1 align="center">Login</h1>
+		
+		
+		<form name=login method="GET" action="">
+		<table style="width:500px">
+		<tr>
+			<td>UserName</td>
+			<td>
+				<input type="text" name="name" maxlength="10">
+			</td>	
+		</tr>
+		
+		<tr>
+			<td>Password</td>
+			<td>
+				<input type="password" name="password" maxlength="10">
+			</td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td>
+				<input type="submit" value="Submit" onClick="return check()"/>
+				<input type=reset value="Reset">
+			</td>
+		</tr>
+		
+		</table>
+		</form>
+			
+	</center>
+	</body>
+</html>

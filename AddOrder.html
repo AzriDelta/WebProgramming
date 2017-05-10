@@ -1,0 +1,252 @@
+<html>
+	
+	<head>
+	<title>Order Placement</title>
+	
+	<script>
+	
+		function checkID(custID)
+		{
+			if(!(isFinite(custID)))
+			{
+				return false;
+			}
+			
+			inumber=parseInt(custID);
+			
+			if(inumber>0)
+			{
+				return true;
+			}
+			
+			else
+			{
+				return false;
+			}
+		}
+		
+		function checkDate(date)
+		{
+			if((isFinite(date)))
+			{
+				return false;
+			}
+		
+			else 
+			{
+				return true;
+			}
+		}
+	
+		function checkName(recName)
+		{
+			if((isFinite(recName)))
+			{
+				return false;
+			}
+			
+			if((recName.length>2)&&(recName.length<=20))
+			{
+				return true;
+			}
+			
+			else
+			{
+				return false;
+			}
+		}
+		
+		function checkAdd(address)
+		{
+			if((isFinite(address)))
+			{
+				return false;
+			}
+			
+			if((address.length>2)&&(address.length<=50))
+			{
+				return true;
+			}
+			
+			else
+			{
+				return false;
+			}
+		}
+		
+		function checkCity(city)
+		{
+			if((isFinite(city)))
+			{
+				return false;
+			}
+			
+			else 
+			{
+				return true;
+			}
+		}
+		
+		function checkWeight(courWeight)
+		{
+		
+			if(!(isFinite(courWeight)))
+			{
+				return false;
+			}
+			
+			inumber=parseInt(courWeight);
+			
+			if(inumber<=5))
+			{
+				return true;
+			}
+			
+			else
+			{
+				return false;
+			}
+		}
+		
+		/*---------------------------------------------------------*/
+		
+		function check()
+		{
+			idflag=checkID(document.order.custID.value);
+			dateflag=checkDate(document.order.date.value);
+			nameflag=checkName(document.order.recName.value);
+			addflag=checkAdd(document.order.address.value);
+			cityflag=checkCity(document.order.city.value);
+			weightflag=checkWeight(document.order.courWeight.value);
+			
+			/*if(idflag==false)
+			{
+				alert("Please enter your ID!/Must be number only!");
+				document.order.custID.select();
+				document.order.custID.focus();
+				return false;
+			}	//sudah disiapkan 
+			
+				
+			if(dateflag == false)
+			{
+				alert("Please enter the date!");
+				//document.login.bday.select();
+				//document.login.bday.focus();
+				return false;
+			}		//sudah disiapkan 
+			
+			if(nameflag==false)
+			{
+				alert("Please enter the recipient name!/Length of name is not enough!");
+				document.order.recName.select();
+				document.order.recName.focus();
+				return false;
+			} 	//sudah disiapkan 
+			
+			if(addflag==false)
+			{
+				alert("Please enter the recipient address!");
+				document.order.address.select();
+				document.order.address.focus();
+				return false;
+			} 	//sudah disiapkan 
+			
+			if(cityflag==false)
+			{
+				alert("Please select the city!");
+				document.order.address.select();
+				document.order.address.focus();
+				return false;
+			} sudah disiapkan */
+			
+			if(weightflag==false)
+			{
+				alert("Please enter the weight!");
+				document.order.courWeight.select();
+				document.order.courWeight.focus();
+				return false;
+			} 
+			
+			return true;
+		}
+	
+	</script>
+	
+	
+	</head>
+	
+	<body>
+	<center>
+	
+		<br>
+		<h1>ORDER PLACEMENT</h1>
+		
+		<form name="order" method="GET" action="">
+		<table style="width:500px">
+			<tr>
+				<td>Customer Id*</td>
+				<td><input type="text" name="custID" maxlength="8"> </td>
+			</tr>
+			
+			<tr>
+				<td>Date of Order*</td>
+				<td>
+					<input type="date" name="date">
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Recipient Name*</td>
+				<td><input type="text" name="recName" maxlength="25"><td>
+			</tr>
+			
+			<tr>
+				<td>Recipient Address*</td>
+				<td>
+					<textarea rows="4" cols="20" name="address" maxlength="50"></textarea>
+				<td> 
+			</tr>
+			
+			<tr>
+				<td>Recipient City*</td>
+				<td>
+					<select name="city">
+					<!-- <option selected="true" style="display:none;"> !-->
+					<option value="T">Terengganu
+					<option value="K">Kelantan
+					<option value="P">Pahang
+					<option value="S">Selangor
+				</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Courier Weight*</td>
+				<td><input type="text" name="courWeight" maxlength="5"><td>
+			</tr>
+			
+			<tr>
+				<td>Description</td>
+				<td><textarea rows="1" cols="20" name="description" maxlength="30"></textarea><td>
+			</tr>
+			
+			<tr>
+				<td>(*) mandatory field</td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" value="Submit" onClick="return check()"/>
+					<input type=reset value="Reset">
+				</td>
+			</tr>
+			
+		</table>
+			
+		</form>
+	</center>
+	</body>
+</html>
