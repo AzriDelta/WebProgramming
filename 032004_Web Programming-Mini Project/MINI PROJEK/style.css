@@ -1,0 +1,302 @@
+/*
+    designed by AlphaStudio.pl
+    http://www.alphastudio.pl/
+    released under Creative Commons Attribution 3.0 license
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 16px Arial, Helvetica, sans-serif;
+    color: #CCCCCC;
+    background: #2D3030 url('images/bg.jpg');
+}
+
+h1, h2 {
+    text-transform: lowercase;
+    font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 2.625em;
+    letter-spacing: -2px;
+}
+
+h2 {
+    font-size: 2.625em;
+    letter-spacing: -1px;
+    color: #7C7C7C;
+}
+
+p {
+    padding: .75em 0;
+    line-height: 1.5em;
+}
+
+a {
+    text-decoration: underline;
+    color: #D68879;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* header */
+
+#header, #intro, #intro2, #main, #bar, #footer {
+    width: 100%;
+    min-width: 1200px;
+}
+
+#header2, #intro3, #main2 {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+#header {
+    height: 200px;
+    border-bottom: 1px solid #2B2D2D;
+}
+
+#header h1 {
+    float: left;
+    font: 4em "Kaushan Script", cursive;
+    color: #E7E7E7;
+    padding: 70px 0 0 40px;
+}
+
+#header h1 a {
+    text-decoration: none;
+    color: #E7E7E7;
+}
+
+/* menu */
+
+#menu {
+    float: right;
+    padding-top: 110px;
+}
+
+#menu ul {
+    list-style: none;
+}
+
+#menu ul li {
+    display: block;
+    float: left;
+    padding-right: 50px;
+}
+
+#menu ul li a {
+    display: block;
+    float: left;
+    font: 22px/30px "Titillium Web", Arial, Helvetica, sans-serif;
+    text-transform: lowercase;
+    text-decoration: none;
+    color: #C55847;
+}
+
+#menu ul li a:hover {
+    color: #C75E4D;
+}
+
+#menu ul li.active a, #menu ul li.active a:hover {
+    color: #D68879;
+}
+
+/* intro */
+
+#intro {
+    background: #393D3D url('images/intro.jpg');
+    border-bottom: 1px solid #373939;
+}
+
+#intro2 {
+    background: url('images/intro2.jpg') repeat-x;
+    padding: 50px 0;
+}
+
+#intro3 {
+    background: url('images/intro3.jpg') no-repeat bottom;
+}
+
+#intro4 {
+    background: url('images/intro4.jpg') no-repeat top;
+    padding: 10px;
+}
+
+/* main */
+
+#main {
+    background: #4C4F50 url('images/main.jpg');
+}
+
+#main img {
+    border: 7px solid #555757;
+}
+
+/* content */
+
+#content {
+    float: left;
+    width: 770px;
+    padding: 60px 0 20px 10px;
+}
+
+#content .post {
+    padding: 0 0 6em 0;
+}
+
+#content .entry {
+    padding-top: 1.5em;
+}
+
+#content h2 a {
+    color: #7C7C7C;
+    text-decoration: none;
+}
+
+p.postmeta {
+    color: #A5A6A6;
+}
+
+p.readmore a {
+    display: block;
+    height: 32px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 32px;
+    background: #484A4B;
+    border: 1px solid #434646;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+p.readmore a:hover {
+    color: #D88C7D;
+    background: #4C4F50;
+    border: 1px solid #48494A;
+}
+
+#content p.readmore, #bar p.readmore {
+    padding: 2em 2em 0 0;
+    text-align: right;
+}
+
+#content p.readmore a, #bar p.readmore {
+    float: right;
+    width: 110px;
+    margin-bottom: 3em;
+}
+
+/* sidebar */
+
+#sidebar {
+    float: right;
+    width: 360px;
+    padding: 60px 10px 20px 0;
+}
+
+#sidebar h2, #bar h2 {
+    font-size: 2em;
+    letter-spacing: -1px;
+}
+
+#sidebar ul {
+    list-style: none;
+    margin: 2.25em 0 2.75em 0;
+}
+
+#sidebar ul li {
+    padding: .2em 0 .2em 30px;
+    line-height: 3em;
+    background: url('images/li.gif') no-repeat 0 1.4em;
+}
+
+.box {
+    margin-bottom: 3em;
+}
+
+.imgsmall {
+    clear: both;
+    padding-bottom: 1.5em;
+}
+
+.left {
+    display: block;
+    float: left;
+}
+
+.imgsmall .left {
+    width: 104px;
+}
+
+.right {
+    display: block;
+    float: right;
+}
+
+.imgsmall .right {
+    width: 215px;
+}
+
+#sidebar p.readmore {
+    width: 80px;
+    padding: 20px 0 0 0;
+}
+
+/* bar */
+
+#bar {
+    clear: both;
+    background: #393D3D url('images/intro.jpg');
+    border-top: 1px solid #373939;
+}
+
+#bar2 {
+    margin: 0 auto;
+    width: 1190px;
+    padding: 60px  0 20px 10px;
+}
+
+.col {
+    float: left;
+    width: 360px;
+    padding-right: 50px;
+}
+
+.lastcol {
+    padding-right: 0!important;
+}
+
+#bar h2 {
+    padding: 0 0 1em 7px;
+}
+
+#bar img {
+    margin-bottom: 1em;
+    border: 7px solid #4A4E4E;
+}
+
+.clearing {
+    clear: both;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* footer */
+
+#footer {
+    clear: both;
+    padding: 50px 0 100px 0;
+    border-top: 1px solid #2B2D2D;
+}
+
+#footer p {
+    text-align: center;
+}
